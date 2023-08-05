@@ -11,6 +11,8 @@ public class PickUpKey : MonoBehaviour
 
     public GameObject HealthBar;
 
+    public GameObject beckground;
+
     private void Start()
     {
         m_renderer = GetComponentInParent<SpriteRenderer>();
@@ -21,8 +23,8 @@ public class PickUpKey : MonoBehaviour
         m_renderer.enabled = false;
         m_particle.Stop();
         allParticles.Play();
-        //HealthBar.GetComponent<LifeHUD>().HealPlayer();
-        //Debug.Log("Hit!");
+        HealthBar.GetComponent<LifeHUD>().HealPlayer();
+        Debug.Log("Hit!");
     }
 
 }
